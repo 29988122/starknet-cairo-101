@@ -151,7 +151,7 @@ func validate_answers{
         syscall_ptr : felt*, 
         pedersen_ptr : HashBuiltin*,
         range_check_ptr
-    }(sender_address: felt, secret_value_i_guess: felt, next_secret_value_i_chose: felt):
+    }(sender_address: felt, secret_value_i_guess: felt):
     # CAREFUL THERE IS A TRAP FOR PEOPLE WHO WON'T READ THE CODE
     # This exercice looks like the previous one, but actually the view secret_value returns a different value than secret_value
     # Sending the wrong execution result will remove some of your points, then validate the exercice. You won't be able to get those points back later on!
