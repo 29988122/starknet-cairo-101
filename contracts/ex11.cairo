@@ -45,11 +45,11 @@ end
 #
 
 @external
-func claim_points{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*, range_check_ptr}(secret_value_i_guess: felt, next_secret_value_i_chose: felt):
+func claim_points{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*, range_check_ptr}(secret_value_i_guess: felt):
     # Reading caller address
     let (sender_address) = get_caller_address()
     # Check if your answer is correct
-    validate_answers(sender_address, secret_value_i_guess, next_secret_value_i_chose)
+    validate_answers(sender_address, secret_value_i_guess)
     # Reading caller address again, revoked references I love you
     let (sender_address) = get_caller_address()
     # Checking if the user has validated the exercice before
